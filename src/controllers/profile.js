@@ -9,7 +9,6 @@ exports.get = (req, res) => {
       // take actual rows out of query results
       values[0] = values[0].rows
       values[1] = values[1].rows[0]
-      console.log({values})
       return values;
     })
     .then(values => {

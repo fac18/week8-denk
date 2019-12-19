@@ -1,0 +1,19 @@
+/* VARIABLES */
+
+:root {
+  /* COLOURS */
+  --jet: #323031; /* background */
+  --apple: #a7d49b; /* for text */
+  --desert: #e4c3ad; /* auxiliary/detail */
+
+}
+
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
