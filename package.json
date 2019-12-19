@@ -1,0 +1,26 @@
+{
+  "name": "week8-denk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test tape tests/*.tests.js | tap-spec",
+    "start": "node src/server.js",
+    "db_init": "node src/model/db_init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fac18/week8-denk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fac18/week8-denk/issues"
+  },
+  "homepage": "https://github.com/fac18/week8-denk#readme",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "pg": "^7.15.1",
+    "url": "^0.11.0"
+  }
+}

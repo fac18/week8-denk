@@ -20,7 +20,7 @@ CREATE TABLE preps (
 
 CREATE TABLE apocalypses (
   apocalypse_id SERIAL PRIMARY KEY,
-  apocalypse_type VARCHAR NOT NULL,
+  apocalypse_type VARCHAR NOT NULL
 );
 
 CREATE TABLE bridge (
