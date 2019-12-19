@@ -1,15 +1,15 @@
 <section class="home-section">
-    <form action="" class="home-section__form">
-    <fieldset>
-    <legend class="home-section__heading">Choose your apocalypse:</legend>
-        <label for="apocalypse-input" class="home-section__label">        
-            <select required name="star-sign" id="login-star-sign">
-                {{#each apocalypses}}
-                    <option value={{this}}>{{this}}</option>
-                {{/each}} 
-            </select>
-        </label>
-        <input type="submit" name="apocalypse-submit" class="home-section__submit" id='apocalypse-submit'>
-    </fieldset>
+  <fieldset class="home-section__field">
+    <form action="" method="" class="home-section__form">
+      <legend class="home-section__legend">Choose your apocalypse:</legend>
+      <label for="apocalypse-input" class="home-section__label">
+          <select class="home-section__select" required name="apocalypse">
+              {{#each apocalypses}}
+                  <option value={{this}}>{{this}}</option>
+              {{/each}}
+          </select>
+      </label>
+      <input type="submit" name="apocalypse-submit" class="home-section__submit" id='apocalypse-submit'>
     </form>
+  </fieldset>
 </section>
