@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section class="home-section view">
     <form action="" class="home-section__form">
     <fieldset>
@@ -11,5 +12,20 @@
         </label>
         <input type="submit" name="apocalypse-submit" class="home-section__submit" id='apocalypse-submit'>
     </fieldset>
+=======
+<section class="home-section">
+  <fieldset class="home-section__field">
+    <form action="" method="" class="home-section__form">
+      <legend class="home-section__legend">Choose your apocalypse:</legend>
+      <label for="apocalypse-input" class="home-section__label">
+          <select class="home-section__select" required name="apocalypse">
+              {{#each apocalypses}}
+                  <option value={{this}}>{{this}}</option>
+              {{/each}}
+          </select>
+      </label>
+      <input type="submit" name="apocalypse-submit" class="home-section__submit" id='apocalypse-submit'>
+>>>>>>> 09703e368d8871954cd8d983d8e47a52911bcb34
     </form>
+  </fieldset>
 </section>
