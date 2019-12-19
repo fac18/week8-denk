@@ -59,13 +59,19 @@ test("insert user into the database", t => {
       if (err) console.log(err);
       t.deepEqual(result.length, 4, "length of result is 4");
     });
-    postData("Kin", "$2d$12$l.4x/AfrnClssczdWZeyWebzJuiRcE1HrU0F3UEMqguqdxBWEaRZu", "Leo", "Zombieland", (err, res) => {
-      if (err) console.log(err);
-      getData((err, result) => {
+    postData(
+      "Kin",
+      "$2d$12$l.4x/AfrnClssczdWZeyWebzJuiRcE1HrU0F3UEMqguqdxBWEaRZu",
+      "Leo",
+      "Zombieland",
+      (err, res) => {
         if (err) console.log(err);
-        t.deepEqual(result.length, 5, "new length is 5");
-        t.end();
-      });
-    });
+        getData((err, result) => {
+          if (err) console.log(err);
+          t.deepEqual(result.length, 5, "new length is 5");
+          t.end();
+        });
+      }
+    );
   });
 });
