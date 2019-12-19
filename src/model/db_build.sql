@@ -46,13 +46,13 @@ INSERT INTO preps (prep_name, description, prep_type, image_url) VALUES
 ('EMP bomb', 'Short-circuit those super intelligent bastard machines', 'Item', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg');
 
 INSERT INTO apocalypses (apocalypse_type) VALUES
-('Biblical'),
-('Aliens'),
-('Zombies'),
-('Ecological'),
-('War'),
-('Biological'),
-('Technological');
+('biblical'),
+('aliens'),
+('zombies'),
+('ecological'),
+('war'),
+('biological'),
+('technological');
 
 INSERT INTO bridge (prepper_id, prep_id, apocalypse_id) VALUES
 (4,1,1), (3,2,2), (2,3,3), (4,4,4), (1,5,5), (3,6,6), (1,7,7);

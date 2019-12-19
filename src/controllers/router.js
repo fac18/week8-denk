@@ -16,7 +16,7 @@ router.get("/about", about.get);
 router.get("/get-prepped", getPrepped.get);
 router.get("/login", login.get);
 router.get("/logout", logout.get);
-router.get("/single-prep", singlePrep.get);
+router.get("/preps/:apocalypse", singlePrep.get);
 router.get("/profile", profile.get);
 
 router.use(error.client);

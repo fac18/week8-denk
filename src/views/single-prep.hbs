@@ -1,11 +1,15 @@
 <section class="single-prop-section view">
+
     <fieldset>
-    <legend class="single-prep-section__heading">{{apocalypses.apocalypse_name}}</legend>
-        
 
+        {{#each preps}}
+    <legend class="single-prep-section__heading">{{prep_name}}</legend>
 
+    <div class="prep-box">
+        <p class="single-prep-section__type">{{prep_type}}</p>
+        <p class="single-prep-section__description">{{description}}</p>
+      
+    {{/each}}
+    </div>
     </fieldset>
-    
-    
-
 </section>
