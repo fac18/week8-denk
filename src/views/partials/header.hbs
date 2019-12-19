@@ -1,0 +1,23 @@
+<header class="navbar">
+  <div class="navbar__container">
+    <nav class="navbar__nav" role="navigation">
+        <h1 class="navbar__heading">PREPPER</h1>
+        <a class="navbar__burger">&#9776;</a>
+        <ul class="navbar__list"> {{!- class 'navbar__list--visible' toggled when burger clicked}}
+            <li class="navbar__item">
+            <a class="navbar__link {{#if activePage.home}}navbar__link--active{{/if}}" href="/">Home</a>
+            </li>
+            <li class="navbar__item">
+            <a class="navbar__link {{#if activePage.login}}navbar__link--active{{/if}}" href="/login">Login</a>
+            </li>
+            <li class="navbar__item">
+            <a class="navbar__link {{#if activePage.about}}navbar__link--active{{/if}}" href="/about">About</a>
+            </li>
+            <li class="navbar__item">
+            <a class="navbar__link {{#if activePage.profile}}navbar__link--active{{/if}}" href="/profile">Profile</a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+</header>
+
