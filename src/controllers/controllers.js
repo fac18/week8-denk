@@ -19,6 +19,7 @@ router.get("/logout", logout.get);
 router.get("/single-prep", singlePrep.get);
 router.get("/single-prepper", singlePrepper.get);
 
+router.use(error.unauth);
 router.use(error.client);
 router.use(error.server);
 
