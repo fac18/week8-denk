@@ -11,7 +11,7 @@
     "test_db_init" : "NODE_ENV=test node src/model/db_init.js",
     "start": "node src/server.js",
     "db_init": "node src/model/db_init.js",
-    "coverage": "codecov",
+    "coverage": "codecov"
   },
   "repository": {
     "type": "git",
