@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test tape tests/*-test.js | tap-spec",
-    "test_server": "node src/tests/server-test.js | tap-spec",
+    "test_db": "node src/tests/db-test.js | tap-spec",
     "start": "node src/server.js",
     "start:watch": "nodemon src/server.js",
-    "db_init": "node src/model/db_init.js"
+    "db_init": "node src/model/db_init.js",
+    "test": "NODE_ENV=test nyc --reporter=lcov tape src/tests/server-test.js | tap-spec",
+    "coverage": "codecov"
   },
   "repository": {
     "type": "git",
