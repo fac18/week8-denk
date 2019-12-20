@@ -1,26 +1,26 @@
 <section class="get-prepped-section view">
-        <form action="/get-prepped" method="POST" class="get-prepped__form">
+        <form action="/submit-prep" method="POST" class="get-prepped__form">
     <fieldset class="get-prepped__field">
         <legend>Get Prepped</legend>
-            <label for="get-prepped-name" class="get-prepped-section__label">
+            <label for="name" class="get-prepped-section__label">
                 Prep Name
-                <input required type="text" name="get-prepped-name" class="get-prepped-section__input" id="get-prepped-name">
+                <input required type="text" name="name" class="get-prepped-section__input" id="get-prepped-name">
             </label>
-            <label for="get-prepped-type" class="get-prepped-section__label">
+            <label for="type" class="get-prepped-section__label">
                 Type
-                <select required name="get-prepped-type" id="get-prepped-type">
+                <select required name="type" id="get-prepped-type">
                     <option value="Skill">Skill</option>
                     <option value="Tip">Tip</option>
                     <option value="Item">Item</option>
                 </select>
             </label>
-            <label for="get-prepped-description" class="get-prepped-section__label">
+            <label for="description" class="get-prepped-section__label">
                 Description
-                <input required type="text" name="get-prepped-description" class="get-prepped-section__input" id="get-prepped-description">
+                <input required type="text" name="description" class="get-prepped-section__input" id="get-prepped-description">
             </label>
-            <label for="get-prepped-image" class="get-prepped-section__label">
+            <label for="image" class="get-prepped-section__label">
                 Choose your image
-                 <input type="url" name="get-prepped-image" class="get-prepped-section__input" id="get-prepped-image">
+                 <input type="url" name="image" class="get-prepped-section__input" id="get-prepped-image">
             </label>
             <input type="submit" class="get-prepped-section__submit">
     </fieldset>

@@ -13,7 +13,7 @@ function toggleNavBurger(open, closed) {
 
 const homeForm = document.querySelector('.home-section__form')
 
-homeForm.addEventListener('submit', e => {
-  e.preventDefault();
-  window.location.href = `/preps/${e.target.apocalypse.value}`;
-})
+// homeForm.addEventListener('submit', e => {
+//   e.preventDefault();
+//   window.location.href = `/preps/${e.target.apocalypse.value}`;
+// })
