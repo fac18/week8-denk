@@ -5,12 +5,12 @@ exports.get = (req, res) => {
 
   getPreps(apocalypseType)
     .then(values => {
-      console.log(values.rows);
+      //console.log(values.rows);
       return values.rows;
     })
     .then(values => {
 
-        console.log(values[0]);
+       // console.log(values[0]);
       res.render("single-prep", { preps: values });
     })
     .catch(err => {
