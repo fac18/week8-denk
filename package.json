@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
+    "test_db": "NODE_ENV=test node src/tests/db.test.js | tap-spec",
     "test_server": "NODE_ENV=test node src/tests/server.test.js | tap-spec",
     "start:watch": "NODE_ENV=test nodemon src/server.js",
     "test_db_init" : "NODE_ENV=test node src/model/db_init.js",
     "start": "node src/server.js",
-    "db_init": "node src/model/db_init.js"
+    "db_init": "node src/model/db_init.js",
+    "coverage": "codecov",
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,6 @@
   "homepage": "https://github.com/fac18/week8-denk#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "env2": "^2.2.2",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "codecov": "^3.6.1",
+    "env2": "^2.2.2",
     "nodemon": "^2.0.2",
     "nyc": "^14.1.1",
     "supertest": "^4.0.2",

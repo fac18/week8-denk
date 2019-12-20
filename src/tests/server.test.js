@@ -1,6 +1,7 @@
 const test = require("tape");
 const request = require("supertest");
 const app = require("../app");
+const router = require("../controllers/router");
 
 test("/ will load with 200", t => {
   request(app)
@@ -35,9 +36,9 @@ test("/login will load with 200", t => {
     });
 });
 
-test("/single-prep will load with 200", t => {
+test("/get-prepped will load with 200", t => {
   request(app)
-    .get("/single-prep")
+    .get("/get-prepped")
     .expect(200)
     .end((err, res) => {
       t.error(err);
@@ -46,13 +47,13 @@ test("/single-prep will load with 200", t => {
     });
 });
 
-test("/single-prepper will load with 200", t => {
+test("/profile will load with 200", t => {
   request(app)
-    .get("/single-prepper")
+    .get("/profile")
     .expect(200)
     .end((err, res) => {
       t.error(err);
-      t.deepEqual(res.statusCode, 200, "/single-prepper should load with 200");
+      t.deepEqual(res.statusCode, 200, "/profile should load with 200");
       t.end();
     });
 });
