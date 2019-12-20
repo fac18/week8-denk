@@ -1,7 +1,7 @@
 const test = require("tape");
 const runDbBuild = require("../model/db_build.js");
 const { getApocs, getPreps, getPrepperPreps, getPrepper } = require("../controllers/queries/get-data.js");
-const postData = require("../controllers/queries/post-data.js");
+const { addPrep } = require("../controllers/queries/post-data.js");
 const dbConnection = require("../model/db_connection.js");
 
 test("tape is working", t => {
@@ -9,71 +9,72 @@ test("tape is working", t => {
   t.end();
 });
 
-test("select all data from preppers table", t => {
+// get-data.getPrepper
+test("select a prepper from preppers table", t => {
   runDbBuild((err, res) => {
     t.error(err, "No error");
-    const expected = [
-      {
-        prepper_id: 1,
-        prepper_name: "Maria",
-        hashed_password:
-          "$2y$12$rNlZJapyFS2XfHJ8fIeDOOeg0Vs.dO31v1Mv84AuT3xlNWUcJRBQC",
-        star_sign: "Aquarius",
-        movie: "Resident Evil"
-      },
-      {
-        prepper_id: 2,
-        prepper_name: "Jamie",
-        hashed_password:
-          "$2y$12$etQ8BfHuFZE5anbprJ8MzeitMh3G/Txqi0gclaimBUGxEN1wLlEcS",
-        star_sign: "Leo",
-        movie: "Waterworld"
-      },
-      {
-        prepper_id: 3,
+    const expected = {
         prepper_name: "Reggie",
         hashed_password:
           "$2y$12$1MBVnXoVF2VfGXFK/Ua7mOiu7jZTfEahzqzhhOCowA390o0FLCdPO",
         star_sign: "Sagittarius",
         movie: "Titanic"
-      },
-      {
-        prepper_id: 4,
-        prepper_name: "Dan",
-        hashed_password:
-          "$2y$12$l.4x/AfrnClssczdWZeyWebzJuiRcE1HrU0F3UEMqguqdxBWEaRZu",
-        star_sign: "Virgo",
-        movie: "Mad Max: Fury Road"
-      }
-    ];
-    getPreps((err, result) => {
-      if (err) console.log(err);
-      t.deepEqual(result, expected, "returns expected user data");
+    }
+    getPrepper(3)
+      .then(res => res.rows[0])
+      .then(prepper => {
+        t.deepEqual(prepper, expected, "returns Reggie");
+      })
+      .catch(console.log)
       t.end();
-    });
   });
 });
 
-test("insert user into the database", t => {
-  runDbBuild((err, res) => {
+// post-data.addPrep
+test('add a new prep', t => {
+  runDbBuild((err,res) => {
     t.error(err, "No error");
-    getData((err, result) => {
-      if (err) console.log(err);
-      t.deepEqual(result.length, 4, "length of result is 4");
-    });
-    postData(
-      "Kin",
-      "$2d$12$l.4x/AfrnClssczdWZeyWebzJuiRcE1HrU0F3UEMqguqdxBWEaRZu",
-      "Leo",
-      "Zombieland",
-      (err, res) => {
-        if (err) console.log(err);
-        getData((err, result) => {
-          if (err) console.log(err);
-          t.deepEqual(result.length, 5, "new length is 5");
-          t.end();
-        });
-      }
-    );
-  });
-});
+    const newPrep = {
+      name: 'Mega-rice seeds',
+      description: 'Hardcore GM uber-resistant mega-rice, last product of Monsanto before the fall',
+      type: 'item',
+      image: 'https://royalsociety.org/~/media/policy/projects/gm-plants/golden%20rice-gm-compared-with-non-gm-rice-c-FotografiaBasica.jpg',
+      apocalypse: 'ecological'
+    }
+    // add prep, authored by Jamie (id 2)
+    console.log(addPrep(2, newPrep))
+      // .then(console.log)
+      // .then(prepper => {
+      //   t.deepEqual(prepper, expected, "returns Reggie");
+      // })
+      // .catch(console.log)
+      t.end();
+
+  })
+})
+
+// post-data.addPrepper
+// needs refitting with promises etc.
+// test("insert user into the database", t => {
+//   runDbBuild((err, res) => {
+//     t.error(err, "No error");
+//     getData((err, result) => {
+//       if (err) console.log(err);
+//       t.deepEqual(result.length, 4, "length of result is 4");
+//     });
+//     postData(
+//       "Kin",
+//       "$2d$12$l.4x/AfrnClssczdWZeyWebzJuiRcE1HrU0F3UEMqguqdxBWEaRZu",
+//       "Leo",
+//       "Zombieland",
+//       (err, res) => {
+//         if (err) console.log(err);
+//         getData((err, result) => {
+//           if (err) console.log(err);
+//           t.deepEqual(result.length, 5, "new length is 5");
+//           t.end();
+//         });
+//       }
+//     );
+//   });
+// });
