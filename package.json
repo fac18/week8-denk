@@ -10,6 +10,7 @@
     "test_logic": "NODE_ENV=test node src/tests/logic.test.js | tap-spec",
     "start:watch": "NODE_ENV=test nodemon src/server.js",
     "test_db_init" : "NODE_ENV=test node src/model/db_init.js",
+    "nyc" : "NODE_ENV=test nyc tape src/tests/*.test.js | tap-spec",
     "start": "node src/server.js",
     "db_init": "node src/model/db_init.js",
     "coverage": "codecov"

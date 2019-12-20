@@ -42,14 +42,12 @@ test('add a new prep', t => {
       apocalypse: 'ecological'
     }
     // add prep, authored by Jamie (id 2)
-    console.log(addPrep(2, newPrep))
-      // .then(console.log)
-      // .then(prepper => {
-      //   t.deepEqual(prepper, expected, "returns Reggie");
-      // })
-      // .catch(console.log)
+    addPrep(2, newPrep)
+      .then(res => {
+        t.deepEqual(res.command, 'INSERT', 'new prep successfully added to database');
+      })
+      .catch(console.log)
       t.end();
-
   })
 })
 
