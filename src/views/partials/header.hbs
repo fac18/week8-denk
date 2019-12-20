@@ -1,23 +1,62 @@
 <header class="navbar">
+  <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
   <div class="navbar__container">
     <nav class="navbar__nav" role="navigation">
-        <h1 class="navbar__heading">prepper</h1>
-        <a class="navbar__burger">&#9776;</a>
+      {{!-- <div class="survival-img"></div> --}}
+        <img src="/img/survivalist.png" class="survival-img">
+        <h1 class="navbar__heading">Prepper</h1>
+        <a class="navbar__burger"></a>
+        {{!-- got rid of burger --}}
         <ul class="navbar__list"> {{!- class 'navbar__list--visible' toggled when burger clicked}}
             <li class="navbar__item">
-            <a class="navbar__link {{#if activePage.home}}navbar__link--active{{/if}}" href="/">Home</a>
+            <a class="navbar__link {{#if activePage.home}}navbar__link--active{{/if}}" href="/">HOME</a>
             </li>
             <li class="navbar__item">
-            <a class="navbar__link {{#if activePage.login}}navbar__link--active{{/if}}" href="/login">Login</a>
+            <a class="navbar__link {{#if activePage.login}}navbar__link--active{{/if}}" href="/login">LOGIN</a>
             </li>
             <li class="navbar__item">
-            <a class="navbar__link {{#if activePage.about}}navbar__link--active{{/if}}" href="/about">About</a>
+            <a class="navbar__link {{#if activePage.about}}navbar__link--active{{/if}}" href="/about">ABOUT</a>
             </li>
             <li class="navbar__item">
-            <a class="navbar__link {{#if activePage.profile}}navbar__link--active{{/if}}" href="/profile">Profile</a>
+            <a class="navbar__link {{#if activePage.profile}}navbar__link--active{{/if}}" href="/profile">PROFILE</a>
             </li>
         </ul>
     </nav>
   </div>
+  <div class="header-container">
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://urbansurvivalsite.com/wp-content/uploads/8-tips-for-surviving-biological-warfare-wide-1.jpg" class="imgWidth">
+    <div class="text">Despite the progress made by international conventions, biological weapons (BW) and chemical weapons (CW) still pose a threat</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://cdn.flickeringmyth.com/wp-content/uploads/2017/08/world-war-party-game-of-trump-600x400.jpg" class="imgWidth">
+    <div class="text">An electromagnetic pulse can melt any electronic device or system within hundreds of miles </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://urbansurvivalsite.com/wp-content/uploads/bartering-101-what-to-do-when-money-has-no-meaning-wide-1.jpg?ezimgfmt=ng:webp/ngcb1" class="imgWidth">
+    <div class="text">Techniques to help you survive in the wild</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://www.2gb.com/wp-content/uploads/sites/2/2019/02/Fly-UFO.jpg?resize=600%2C400" class="imgWidth">
+    <div class="text">US Navy confirms declassified military footage as "unidentified aerial phenomena"</div>
+  </div>
+
+</div>
+    <aside class="prep-content3">DAILY PREP BULLETIN: LATEST NEWS</aside>
+    <aside class="prep-content"><img src="/img/prepnews.png"></aside>
+    <aside class="prep-content2"><img src="/img/prepnews2.png"></aside>
+</div>
 </header>
 
