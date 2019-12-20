@@ -7,6 +7,7 @@
     "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
     "test_db": "NODE_ENV=test node src/tests/db.test.js | tap-spec",
     "test_server": "NODE_ENV=test node src/tests/server.test.js | tap-spec",
+    "test_logic": "NODE_ENV=test node src/tests/logic.test.js | tap-spec",
     "start:watch": "NODE_ENV=test nodemon src/server.js",
     "test_db_init" : "NODE_ENV=test node src/model/db_init.js",
     "start": "node src/server.js",
