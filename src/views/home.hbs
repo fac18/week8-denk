@@ -2,7 +2,7 @@
   <fieldset class="home-section__field">
     <form action="" method="" class="home-section__form">
       <legend class="home-section__legend">Home</legend>
-{{> midder }}
+
       <label for="apocalypse-input" class="home-section__label">Choose your apocalypse:
           <select class="home-section__select" required name="apocalypse">
               {{#each apocalypses}}
@@ -13,4 +13,5 @@
       <input type="submit" name="apocalypse-submit" class="home-section__submit" id='apocalypse-submit'>
     </form>
   </fieldset>
+  {{> midder }}
 </section>
