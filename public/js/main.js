@@ -50,7 +50,7 @@ function showSlides() {
 //   if (event.target == modal) {
 //     modal.style.display = "none";
 //   }
-}
+// }
 
 // home form submission sends you to preps page for that apocalypse
 const homeForm = document.querySelector('.home-section__form')
