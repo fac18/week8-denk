@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test tape tests/*-test.js | tap-spec",
-    "test_server": "node src/tests/server-test.js | tap-spec",
+    "test": "NODE_ENV=test tape src/tests/*.test.js | tap-spec",
+    "test_server": "NODE_ENV=test node src/tests/server.test.js | tap-spec",
+    "start:watch": "NODE_ENV=test nodemon src/server.js",
+    "test_db_init" : "NODE_ENV=test node src/model/db_init.js",
     "start": "node src/server.js",
-    "start:watch": "nodemon src/server.js",
     "db_init": "node src/model/db_init.js"
   },
   "repository": {

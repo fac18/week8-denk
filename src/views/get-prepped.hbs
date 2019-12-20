@@ -22,6 +22,14 @@
                 Choose your image
                  <input type="url" name="image" class="get-prepped-section__input" id="get-prepped-image">
             </label>
+            <label for="apocalypse" class="get-prepped-section__label">
+                Apocalypse
+                <select class="get-prepped__select" required name="apocalypse">
+                    {{#each apocalypses}}
+                        <option value={{this}}>{{capitalise this}}</option>
+                    {{/each}}
+                </select>
+            </label>
             <input type="submit" class="get-prepped-section__submit">
     </fieldset>
         </form>

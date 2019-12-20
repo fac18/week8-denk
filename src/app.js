@@ -3,9 +3,8 @@ const path = require("path");
 const favicon = require("serve-favicon");
 const exphbs = require("express-handlebars");
 const controllers = require("./controllers/router");
-const helpers = require("./views/helpers/helpers")
+const helpers = require("./views/helpers")
 const bodyParser = require("body-parser");
-
 
 const app = express();
 
@@ -23,12 +22,8 @@ app.engine("hbs", exphbs({
 app.set("port", process.env.PORT || 3002);
 app.use(favicon(path.join(__dirname, "..", "public", "img", "skull.png")));
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(express.static(path.join(__dirname,"..","public")));
 
 app.use(controllers);
-
-
-
 
 module.exports = app;

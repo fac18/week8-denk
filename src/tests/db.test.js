@@ -1,12 +1,14 @@
 const test = require("tape");
-const runDbBuild = require("../src/model/db_build.js");
-const getData = require("../src/controllers/queries/get-data.js");
-const postData = require("../src/controllers/queries/post-data.js");
-const dbConnection = require("../src/model/db_connection.js");
+const runDbBuild = require("../model/db_build.js");
+const { getApocs, getPreps, getPrepperPreps, getPrepper } = require("../controllers/queries/get-data.js");
+const postData = require("../controllers/queries/post-data.js");
+const dbConnection = require("../model/db_connection.js");
+
 test("tape is working", t => {
   t.equals(1, 1, "one equals one");
   t.end();
 });
+
 test("select all data from preppers table", t => {
   runDbBuild((err, res) => {
     t.error(err, "No error");
@@ -44,7 +46,7 @@ test("select all data from preppers table", t => {
         movie: "Mad Max: Fury Road"
       }
     ];
-    getData((err, result) => {
+    getPreps((err, result) => {
       if (err) console.log(err);
       t.deepEqual(result, expected, "returns expected user data");
       t.end();

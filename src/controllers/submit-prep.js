@@ -1,4 +1,4 @@
-const postData = require("../controllers/queries/post-data");
+const { addPrep } = require("../controllers/queries/post-data");
 
 exports.post = (req, res) => {
   const newPrep = req.body;
@@ -6,7 +6,7 @@ exports.post = (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.redirect("/get-prepped");
+      res.redirect("/profile");
     }
   });
 };
