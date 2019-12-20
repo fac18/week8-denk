@@ -1,16 +1,14 @@
 # DENK
 
 ![](https://api.travis-ci.org/fac18/week8-denk.svg?branch=master)
-[![codecov](https://codecov.io/gh/fac18/week8-denk/branch/master/graph/badge.svg)](https://codecov.io/gh/fac18/week8-denk)
+[![codecov](https://codecov.io/gh/fac18/week8-denk/branch/master/graph/badge.svg)(https://codecov.io/gh/fac18/week8-denk)
 
 ---
 
-We are JAMARAD
-
-{:skull:Dan, 
-:skull:Jamie, 
-:skull:Maria, 
-:skull:Reggie}; 
+:skull:[Dan](https://github.com/redwedge)
+:skull:[Jamie](https://github.com/jc2820)
+:skull:[Maria](https://github.com/marialani)
+:skull:[Reggie](https://github.com/ReginaldJbeili)
 
 ---
 
@@ -45,21 +43,7 @@ We are JAMARAD
         - create a prep
 - The user can do at any point:
     - view what we are about
-    - view their own profile(if they're logged in)
-
----
-
-# DENK
-
-![](https://api.travis-ci.org/fac18/week8-denk.svg?branch=master)
-[![codecov](https://codecov.io/gh/fac18/week8-denk/branch/master/graph/badge.svg)(https://codecov.io/gh/fac18/week8-denk)
-
----
-
-:skull:[Dan](https://github.com/redwedge)
-:skull:[Jamie](https://github.com/jc2820)
-:skull:[Maria](https://github.com/marialani)
-:skull:[Reggie](https://github.com/ReginaldJbeili) 
+    - view their own profile(if they're logged in) 
 
 ---
 
