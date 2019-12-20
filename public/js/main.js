@@ -55,7 +55,14 @@ window.onclick = function(event) {
 // home form submission sends you to preps page for that apocalypse
 const homeForm = document.querySelector('.home-section__form')
 
+<<<<<<< HEAD
 homeForm.addEventListener('submit', e => {
   e.preventDefault();
   window.location.href = `/preps/${e.target.apocalypse.value}`;
 })
+=======
+// homeForm.addEventListener('submit', e => {
+//   e.preventDefault();
+//   window.location.href = `/preps/${e.target.apocalypse.value}`;
+// })
+>>>>>>> dd94b7a7b8d6cb449962099963c8b4ab3901c9a1

@@ -10,6 +10,7 @@ const login = require("./login");
 const logout = require("./logout");
 const singlePrep = require("./single-prep");
 const profile = require("./profile");
+const submitPrep = require("./submit-prep");
 
 router.get("/", home.get);
 router.get("/about", about.get);
@@ -18,6 +19,8 @@ router.get("/login", login.get);
 router.get("/logout", logout.get);
 router.get("/preps/:apocalypse", singlePrep.get);
 router.get("/profile", profile.get);
+router.post("/submit-prep", submitPrep.post);
+
 
 router.use(error.client);
 router.use(error.server);
