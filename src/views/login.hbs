@@ -1,20 +1,24 @@
 <section class="login-section">
-        <form action="/login" method="POST" class="login-section__form">
-    <fieldset class="login-section__field">
-        <legend class="login-section__legend"> Login </legend>
+    <form action="/login" method="POST" class="login-section__form">
+        <fieldset class="login-section__field">
+            <legend class="login-section__legend"> Login </legend>
             <label for="login-name" class="login-section__label">
                 Name
-                <input required type="text" name="name" class="login-section__input" id="login-name">
+                <input required required pattern="[A-Za-z0-9]+" title="Prepare letters and numbers prepper" type="text"
+                    name="name" class="login-section__input" id="login-name">
             </label>
             <label for="login-password" class="login-section__label">
                 Password
-                <input required type="password" name="password" class="login-section__input" id="login-password">
+                <input required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Prepare alteast 1 capital letter and use numbers and letters only prepper"
+                    type="password" name="password" class="login-section__input" id="login-password">
             </label>
-            <label for="login-confirm-password" class="login-section__label" hidden>
+            <label for="login-confirm-password" class="login-section__label">
                 Confirm Password
-                <input required type="password" name="confirm-password" class="login-section__input" id="login-confirm-password">
+                <input required type="password" name="confirm-password" class="login-section__input"
+                    id="login-confirm-password">
             </label>
-            <label for="login-star-sign" class="login-section__label" hidden>
+            <label for="login-star-sign" class="login-section__label">
                 What is your star sign?
                 <select required name="star-sign" id="login-star-sign">
                     <option value="Capricorn">Capricorn</option>
@@ -32,12 +36,11 @@
                     <option value="Sagittarius">Sagittarius</option>
                 </select>
             </label>
-            <label required for="login-movie" class="login-section__label" hidden>
+            <label required for="login-movie" class="login-section__label">
                 What movie do you watch to prepare for the endtimes?
                 <input required type="text" name="movie" class="login-section__input" id="login-movie">
             </label>
             <input type="submit" class="login-section__submit">
-    </fieldset>
-        </form>
+        </fieldset>
+    </form>
 </section>
-
