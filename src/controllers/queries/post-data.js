@@ -1,6 +1,6 @@
 const dbConnection = require("../../model/db_connection");
 
-const postData = (newPrep, cb) => {
+const addPrep = (newPrep, cb) => {
   dbConnection.query(
     "INSERT INTO preps (prep_name, description, prep_type, image_url) VALUES ($1, $2, $3, $4)",
      [newPrep.name, newPrep.description, newPrep.type, newPrep.image,], 
@@ -14,4 +14,4 @@ const postData = (newPrep, cb) => {
   );
 };
 
-module.exports = postData;
+module.exports = addPrep;
