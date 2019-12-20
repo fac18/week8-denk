@@ -19,7 +19,6 @@ app.engine("hbs", exphbs({
   })
 );
 
-app.set("port", process.env.PORT || 3003);
 app.use(favicon(path.join(__dirname, "..", "public", "img", "skull.png")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname,"..","public")));
