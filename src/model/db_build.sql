@@ -37,7 +37,7 @@ INSERT INTO preppers (prepper_name, hashed_password, star_sign, movie) VALUES
 ('Dan', '$2y$12$l.4x/AfrnClssczdWZeyWebzJuiRcE1HrU0F3UEMqguqdxBWEaRZu', 'Virgo', 'Mad Max: Fury Road');
 
 INSERT INTO preps (prep_name, description, prep_type, image_url) VALUES
-('Piety', 'Memorise a new biblical verse errday and pray on the regs', 'Skill', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg'),
+('Piety', 'Memorise a new biblical verse everyday and pray on the regs', 'Skill', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg'),
 ('Blend in', 'Cosplay as the predator on weekends', 'Tip', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg'),
 ('Machete', 'Swing at the zombies head with the pointy end', 'Item', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg'),
 ('Botany', 'Cultivate heat resistant rice for the arid plains of Florida', 'Skill', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg'),
@@ -46,13 +46,13 @@ INSERT INTO preps (prep_name, description, prep_type, image_url) VALUES
 ('EMP bomb', 'Short-circuit those super intelligent bastard machines', 'Item', 'https://uqvk92z67p11sbpjb3nr4qo1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/apocalypse-1400x788.jpg');
 
 INSERT INTO apocalypses (apocalypse_type) VALUES
-('biblical'),
-('aliens'),
-('zombies'),
-('ecological'),
-('war'),
-('biological'),
-('technological');
+('Biblical'),
+('Aliens'),
+('Zombies'),
+('Ecological'),
+('War'),
+('Biological'),
+('Technological');
 
 INSERT INTO bridge (prepper_id, prep_id, apocalypse_id) VALUES
 (4,1,1), (3,2,2), (2,3,3), (4,4,4), (1,5,5), (3,6,6), (1,7,7);
