@@ -1,6 +1,7 @@
 # DENK
 
 ![](https://api.travis-ci.org/fac18/week8-denk.svg?branch=master)
+[![codecov](https://codecov.io/gh/fac18/week8-denk/branch/master/graph/badge.svg)](https://codecov.io/gh/fac18/week8-denk)
 
 ---
 We are Jamarad
