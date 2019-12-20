@@ -6,7 +6,9 @@ const getApocs = () => {
 }
 
 const getPrepper = (prepperId) => {
-  return dbConnection.query('SELECT prepper_name, hashed_password, star_sign, movie FROM preppers;')
+  return dbConnection.query('SELECT prepper_name, hashed_password, star_sign, movie FROM preppers WHERE prepper_id=$1;',
+  [prepperId]
+  )
 }
 
 const getPrepperPreps = (prepperId) => {

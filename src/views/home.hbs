@@ -6,7 +6,7 @@
       <label for="apocalypse-input" class="home-section__label">Choose your apocalypse:
           <select class="home-section__select" required name="apocalypse">
               {{#each apocalypses}}
-                  <option value={{this}}>{{this}}</option>
+                  <option value={{this}}>{{capitalise this}}</option>
               {{/each}}
           </select>
       </label>

@@ -10,9 +10,6 @@ function toggleNavBurger(open, closed) {
     closed.classList.toggle('')
 }
 
-
-
-
 var slideIndex = 0;
 showSlides();
 
@@ -37,7 +34,7 @@ function showSlides() {
 // // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("close")[0];
 
-// // When the user clicks the button, open the modal 
+// // When the user clicks the button, open the modal
 // window.onload = (function() {
 //   modal.style.display = "block";
 // })();
@@ -55,7 +52,7 @@ function showSlides() {
 // home form submission sends you to preps page for that apocalypse
 const homeForm = document.querySelector('.home-section__form')
 
-// homeForm.addEventListener('submit', e => {
-//   e.preventDefault();
-//   window.location.href = `/preps/${e.target.apocalypse.value}`;
-// })
+homeForm.addEventListener('submit', e => {
+  e.preventDefault();
+  window.location.href = `/preps/${e.target.apocalypse.value}`;
+})
