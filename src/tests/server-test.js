@@ -46,13 +46,13 @@ test("/single-prep will load with 200", t => {
     });
 });
 
-test("/single-prepper will load with 200", t => {
+test("/profile will load with 200", t => {
   request(app)
-    .get("/single-prepper")
+    .get("/profile")
     .expect(200)
     .end((err, res) => {
       t.error(err);
-      t.deepEqual(res.statusCode, 200, "/single-prepper should load with 200");
+      t.deepEqual(res.statusCode, 200, "/profile should load with 200");
       t.end();
     });
 });
